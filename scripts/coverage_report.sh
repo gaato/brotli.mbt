@@ -28,8 +28,9 @@ for tool in jq gawk; do
 done
 
 # Measured sources, as module-relative paths (how the reporter names them):
-# the library package, not the test-only checksum package under src/internal.
-LIBRARY='^src/[^/]+[.]mbt$'
+# the library package and the encoder's internal packages, not the test-only
+# checksum package under src/internal.
+LIBRARY='^src/([^/]+|internal/(huffman|lz77)/[^/]+)[.]mbt$'
 
 repo_root="$(cd "$(dirname "$0")/.." && pwd)"
 ledger="$repo_root/TEST_COVERAGE.md"
@@ -96,13 +97,13 @@ jq -r --arg lib "$LIBRARY" '
   }
 
   END {
-    printf "%-28s %11s %8s\n", "file", "covered", "%"
+    printf "%-36s %11s %8s\n", "file", "covered", "%"
     n = asorti(fcov, keys)
     for (i = 1; i <= n; i++) {
       f = keys[i]
-      printf "%-28s %5d/%-5d %7.1f%%\n", f, fcov[f], ftot[f], 100 * fcov[f] / ftot[f]
+      printf "%-36s %5d/%-5d %7.1f%%\n", f, fcov[f], ftot[f], 100 * fcov[f] / ftot[f]
     }
-    printf "%-28s %5d/%-5d %7.1f%%\n", "TOTAL", lcov, ltot, 100 * lcov / ltot
+    printf "%-36s %5d/%-5d %7.1f%%\n", "TOTAL", lcov, ltot, 100 * lcov / ltot
     print ""
 
     bad = 0
