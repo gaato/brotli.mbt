@@ -26,8 +26,8 @@ streams built bit by bit, and seeded pseudo-random splits and corruptions.
 
 - Sources: every non-test `.mbt` directly under `src/`, the library package,
   and under `src/internal/huffman/` and `src/internal/lz77/`, the encoder's
-  building blocks. The test-only checksum package under `src/internal/` is
-  not measured.
+  building blocks. The test-only checksum package and the crosscheck tool
+  under `src/internal/` are not measured.
 - Counts are Coveralls lines: lines with at least one instrumented point,
   covered when any point on them ran.
 

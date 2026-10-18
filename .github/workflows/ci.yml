@@ -45,3 +45,8 @@ jobs:
         run: |
           command -v jq >/dev/null && command -v gawk >/dev/null || { apt-get update && apt-get install -y --no-install-recommends jq gawk; }
           scripts/coverage_report.sh
+
+      - name: Cross-check the encoder with the reference decoder
+        run: |
+          python3 -c 'import brotli' 2>/dev/null || { apt-get update && apt-get install -y --no-install-recommends python3 python3-brotli; }
+          scripts/crosscheck.py
