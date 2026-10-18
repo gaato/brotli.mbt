@@ -7,6 +7,12 @@ never does. Every breaking change is listed with a migration note.
 
 ## [Unreleased]
 
+### Changed
+
+- The README's examples are tested: the README is `src/README.mbt.md`,
+  whose code blocks `moon test` compiles and runs on a real stream, and the
+  root `README.md` links to it.
+
 ## [0.1.0] - 2026-10-18
 
 ### Added
