@@ -13,9 +13,16 @@ readme = "src/README.mbt.md"
 
 repository = "https://github.com/gaato/brotli.mbt"
 
-keywords = [ "brotli", "compression", "decompression", "rfc7932", "streaming" ]
+keywords = [
+  "brotli",
+  "compression",
+  "decompression",
+  "encoder",
+  "rfc7932",
+  "streaming",
+]
 
-description = "A streaming Brotli (RFC 7932) decoder in pure MoonBit: arbitrary input chunks, bounded output slices, memory bounded by the window."
+description = "A streaming Brotli (RFC 7932) decoder and encoder in pure MoonBit: arbitrary input chunks, bounded output slices, memory bounded by the window."
 
 source = "src"
 
