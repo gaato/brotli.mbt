@@ -1,4 +1,6 @@
 import {
+  "gaato/brotli/internal/huffman",
+  "gaato/brotli/internal/lz77",
   "moonbitlang/core/debug",
 }
 

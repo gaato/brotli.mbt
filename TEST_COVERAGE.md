@@ -42,7 +42,7 @@ streams built bit by bit, and seeded pseudo-random splits and corruptions.
 - moon's bundled tcc cannot link on some hosts (openSUSE); the script sets
   `MOON_CC=cc` unless it is already set.
 
-Snapshot at the last full measurement (2026-10-18): **99.8 %** (481/482
+Snapshot at the last full measurement (2026-10-18): **99.9 %** (840/841
 lines).
 
 ## Policy
@@ -56,6 +56,10 @@ Must be covered by tests:
   codes, dictionary references, uncompressed and metadata meta-blocks;
 - suspension on input and on output at every unit, through byte-sized and
   random splits.
+- every encoder path: simple prefix codes of one to four symbols, complex
+  codes (including a code length code of one symbol), the uncompressed
+  fallback, flushes, the input buffer sliding, and suspension on output
+  through byte-sized and random splits.
 
 Accepted as uncovered (needs a row):
 
