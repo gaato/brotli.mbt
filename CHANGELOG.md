@@ -7,6 +7,8 @@ never does. Every breaking change is listed with a migration note.
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-10-19
+
 ### Added
 
 - `Encoder`, a streaming RFC 7932 encoder: `step` (into a `MutArrayView`)
