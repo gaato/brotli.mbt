@@ -17,6 +17,7 @@ pub extend Status with @debug.Debug::{to_repr}
 
 ///|
 /// Why a stream was refused.
+#non_exhaustive
 pub(all) enum BrotliErrorKind {
   /// The input ended before the last meta-block did.
   Truncated

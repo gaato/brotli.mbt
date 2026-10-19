@@ -7,6 +7,15 @@ never does. Every breaking change is listed with a migration note.
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-10-19
+
+### Changed
+
+- **`BrotliErrorKind` is `#non_exhaustive`.** A later kind of failure can
+  then be told apart without breaking matches in your code. Migration: a
+  `match` on `BrotliErrorKind` ends with `@brotli.BrotliErrorKind::.. => …`
+  after the existing constructors. `Status` stays exhaustive.
+
 ## [0.2.0] - 2026-10-19
 
 ### Added

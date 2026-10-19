@@ -17,6 +17,7 @@ pub suberror BrotliError {
 pub fn BrotliError::to_repr(Self) -> @debug.Repr
 
 // Types and methods
+#non_exhaustive
 pub(all) enum BrotliErrorKind {
   Truncated
   Corrupt
