@@ -1,5 +1,9 @@
 # gaato/brotli
 
+> **Moved to [gaato/codecs.mbt](https://github.com/gaato/codecs.mbt/tree/main/brotli).**
+> This repository is archived. The module keeps its name, `gaato/brotli`, and
+> new versions are published from there.
+
 A streaming Brotli (RFC 7932) decoder and encoder in pure MoonBit. Native, JS, Wasm and Wasm GC.
 
 ```fish
